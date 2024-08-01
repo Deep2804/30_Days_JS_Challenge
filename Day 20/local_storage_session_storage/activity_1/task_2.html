@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2: Local Storage Object</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = {
+                name: 'John Doe',
+                email: 'john.doe@example.com'
+            };
+            localStorage.setItem('user', JSON.stringify(user));
+
+            const retrievedUser = JSON.parse(localStorage.getItem('user'));
+            console.log('Retrieved object from localStorage:', retrievedUser);
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
+

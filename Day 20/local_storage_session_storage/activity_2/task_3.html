@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3: Form with Local Storage</title>
+</head>
+<body>
+    <form id="userForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <button type="submit">Save</button>
+    </form>
+
+    <h2>Saved Data:</h2>
+    <p id="savedData"></p>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const user = { name, email };
+            localStorage.setItem('user', JSON.stringify(user));
+            displaySavedData();
+        });
+
+        function displaySavedData() {
+            const savedUser = JSON.parse(localStorage.getItem('user'));
+            if (savedUser) {
+                document.getElementById('savedData').textContent = `Name: ${savedUser.name}, Email: ${savedUser.email}`;
+            }
+        }
+
+        window.onload = displaySavedData;
+    </script>
+</body>
+</html>
+
