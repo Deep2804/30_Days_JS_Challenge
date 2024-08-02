@@ -13,6 +13,7 @@ var twoSum = function(nums, target) {
 
 arrayToCheck = [2, 3, 4, 5];
 console.log(twoSum(arrayToCheck, 9));
+
 // Activity 2: Reverse Integer
 // Task 2: Solve the reverse Integer problem on leetcode.
 var reverse = function(x) {
@@ -35,6 +36,7 @@ var reverse = function(x) {
 };
 
 console.log(reverse(-65535));
+
 // Activity 3: Palindrome Number
 // Task 3: Solve the Palindrome Number problem on Leetcode.
 var isPalindrome = function(x) {
@@ -56,7 +58,7 @@ var isPalindrome = function(x) {
   console.log(isPalindrome(12321));
   console.log(isPalindrome(12345));
 
-  
+
 // Activity 4: merge Two Sorted Lists
 // Task 4: Solve the Merge Two Sorted Lists Problem on Leetcode.
 function ListNode(val, next) {
